@@ -383,7 +383,7 @@ const AdminDashboardView: React.FC = () => {
                                         App Version
                                     </th>
                                     <th scope="col" className="px-6 py-3">
-                                        Images Generated
+                                        Proxy Server
                                     </th>
                                     <th scope="col" className="px-6 py-3">
                                         Personal Auth Token
@@ -440,8 +440,8 @@ const AdminDashboardView: React.FC = () => {
                                                 <td className="px-6 py-4">
                                                     {user.appVersion || '-'}
                                                 </td>
-                                                <td className="px-6 py-4 font-medium text-center text-neutral-800 dark:text-neutral-200">
-                                                    {user.totalImage ?? 0}
+                                                <td className="px-6 py-4 text-sm text-neutral-600 dark:text-neutral-300">
+                                                    {user.proxyServer ? user.proxyServer.replace('https://', '').replace('.monoklix.com', '') : '-'}
                                                 </td>
                                                 <td className="px-6 py-4 font-mono text-xs text-neutral-500 dark:text-neutral-400">
                                                     {user.personalAuthToken ? `...${user.personalAuthToken.slice(-6)}` : '-'}
